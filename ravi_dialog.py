@@ -294,6 +294,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
     def connect_signals(self):
         """Connect UI signals to their respective slots."""
         """Conecta os sinais da UI aos seus respectivos slots."""
+        
 
         self.autenticacao.clicked.connect(lambda: authentication.auth(self))
         self.desautenticacao.clicked.connect(lambda: authentication.auth_clear(self))
@@ -403,7 +404,6 @@ class RAVIDialog(QDialog, FORM_CLASS):
         self.series_indice.currentIndexChanged.connect(self.index_explain)
 
         self.setup_custom.clicked.connect(self.setup_custom_clicked)
-
 
         # Create a list of primary and secondary checkboxes
         self.primary_masks = [

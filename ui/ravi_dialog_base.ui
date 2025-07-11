@@ -66,7 +66,7 @@
     </font>
    </property>
    <property name="contextMenuPolicy">
-    <enum>Qt::ContextMenuPolicy::PreventContextMenu</enum>
+    <enum>Qt::PreventContextMenu</enum>
    </property>
    <property name="toolTipDuration">
     <number>-4</number>
@@ -75,7 +75,7 @@
     <bool>false</bool>
    </property>
    <property name="currentIndex">
-    <number>10</number>
+    <number>12</number>
    </property>
    <property name="usesScrollButtons">
     <bool>false</bool>
@@ -134,15 +134,11 @@
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;title&gt;RAVI QGIS Plugin Information&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;RAVI QGIS Plugin Information&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;h3 style=&quot; margin-top:10px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; font-weight:600; color:#333333;&quot;&gt;To use this plugin, you need the following:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt; &lt;/span&gt;&lt;/h3&gt;
-&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:3px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;a href=&quot;https://earthengine.google.com/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#007bff;&quot;&gt;An Active Google Earth Engine Account:&lt;/span&gt;&lt;/a&gt; A registered and approved GEE account (provides access to datasets, APIs, and tools). &lt;/li&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:3px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;a href=&quot;https://earthengine.google.com/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#007bff;&quot;&gt;An Active Google Earth Engine Account:&lt;/span&gt;&lt;/a&gt; A registered and approved GEE account (provides access to datasets, APIs, and tools). &lt;/li&gt;
 &lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;a href=&quot;https://console.cloud.google.com&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#007bff;&quot;&gt;A Google Cloud Project (and its ID):&lt;/span&gt;&lt;/a&gt; A Google Cloud project linked to your GEE account (handles authentication, API enablement, and quota management for Earth Engine services). &lt;/li&gt;&lt;/ul&gt;
 &lt;p style=&quot; margin-top:5px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;a href=&quot;https://caioarantes.github.io/ravi-qgis-plugin/&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; text-decoration: underline; color:#007bff;&quot;&gt;Click here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; to access the step-by-step guide. &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:5px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt;The authentication token will be stored locally, allowing you to skip browser login during future authentications. To switch accounts, click 'Reset Authentication'. &lt;/span&gt;&lt;/p&gt;
@@ -152,15 +148,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:5px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt;📧 &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;Email:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;mailto:caiosimplicioarantes@gmail.com&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; text-decoration: underline; color:#007bff;&quot;&gt;caiosimplicioarantes@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;br /&gt;🔗 &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;LinkedIn:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://www.linkedin.com/in/caioarantes&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; text-decoration: underline; color:#007bff;&quot;&gt;linkedin.com/in/caioarantes&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;br /&gt;💻 &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;GitHub:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://github.com/caioarantes&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; text-decoration: underline; color:#007bff;&quot;&gt;github.com/caioarantes&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h3 style=&quot; margin-top:10px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; font-weight:600; color:#333333;&quot;&gt;Supervisors&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt; &lt;/span&gt;&lt;/h3&gt;
 &lt;p style=&quot; margin-top:5px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot;&gt;This project was supervised by: &lt;/span&gt;&lt;/p&gt;
-&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:3px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prof. Dr. Lucas Rios do Amaral&lt;/span&gt; - &lt;a href=&quot;https://www.linkedin.com/in/lucas-rios-do-amaral-bb302449/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007bff;&quot;&gt;More about the supervisor&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:3px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prof. Dr. Lucas Rios do Amaral&lt;/span&gt; - &lt;a href=&quot;https://www.linkedin.com/in/lucas-rios-do-amaral-bb302449/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007bff;&quot;&gt;More about the supervisor&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
 &lt;li style=&quot; font-family:'sans-serif'; font-size:12pt; color:#333333;&quot; style=&quot; margin-top:0px; margin-bottom:5px; margin-left:8px; margin-right:8px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;M.Sc. Isabella Alves da Cunha&lt;/span&gt; - &lt;a href=&quot;https://www.linkedin.com/in/isabella-alves-da-cunha-a110011b9/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007bff;&quot;&gt;More about the co-supervisor&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="overwriteMode">
       <bool>true</bool>
      </property>
      <property name="textInteractionFlags">
-      <set>Qt::TextInteractionFlag::LinksAccessibleByKeyboard|Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextBrowserInteraction|Qt::TextInteractionFlag::TextEditable|Qt::TextInteractionFlag::TextEditorInteraction|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+      <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
      </property>
      <property name="openLinks">
       <bool>false</bool>
@@ -251,7 +246,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="storageMode">
-       <enum>QgsFileWidget::StorageMode::GetDirectory</enum>
+       <enum>QgsFileWidget::GetDirectory</enum>
       </property>
      </widget>
     </widget>
@@ -536,7 +531,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string/>
      </property>
      <property name="textFormat">
-      <enum>Qt::TextFormat::RichText</enum>
+      <enum>Qt::RichText</enum>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -578,7 +573,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="dateTime">
        <datetime>
-        <hour>21</hour>
+        <hour>0</hour>
         <minute>0</minute>
         <second>0</second>
         <year>2022</year>
@@ -587,7 +582,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </datetime>
       </property>
       <property name="currentSection">
-       <enum>QDateTimeEdit::Section::YearSection</enum>
+       <enum>QDateTimeEdit::YearSection</enum>
       </property>
       <property name="displayFormat">
        <string>yyyy/M/d</string>
@@ -596,7 +591,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <bool>true</bool>
       </property>
       <property name="timeSpec">
-       <enum>Qt::TimeSpec::LocalTime</enum>
+       <enum>Qt::LocalTime</enum>
       </property>
       <property name="date">
        <date>
@@ -662,7 +657,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Start:</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -689,7 +684,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>End:</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -1069,10 +1064,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>90</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_coverage">
@@ -1270,16 +1265,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;This feature allows you to specify a buffer distance in meters to flexibly adjust the Area of Interest (AOI) by applying either a negative or a positive buffer:&lt;/span&gt;&lt;/p&gt;
-&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'MS Shell Dlg 2';&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Negative Buffer:&lt;/span&gt; When a negative buffer is applied, the external edges of the AOI are trimmed, concentrating the analysis on the central region. This approach minimizes edge effects, such as noise or distortions, resulting in more precise and representative data from the core area.&lt;/li&gt;
-&lt;li style=&quot; font-family:'MS Shell Dlg 2';&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Positive Buffer:&lt;/span&gt; When a positive buffer is applied, the AOI is expanded to include not only the central area but also the borders and an additional surrounding area. This expansion can be beneficial for capturing contextual information or ensuring that slight inaccuracies in the AOI boundary do not exclude relevant data.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This feature allows you to specify a buffer distance in meters to flexibly adjust the Area of Interest (AOI) by applying either a negative or a positive buffer:&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Negative Buffer:&lt;/span&gt; When a negative buffer is applied, the external edges of the AOI are trimmed, concentrating the analysis on the central region. This approach minimizes edge effects, such as noise or distortions, resulting in more precise and representative data from the core area.&lt;/li&gt;
+&lt;li style=&quot;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Positive Buffer:&lt;/span&gt; When a positive buffer is applied, the AOI is expanded to include not only the central area but also the borders and an additional surrounding area. This expansion can be beneficial for capturing contextual information or ensuring that slight inaccuracies in the AOI boundary do not exclude relevant data.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_buffer">
@@ -1334,13 +1325,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>0</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="invertedControls">
        <bool>false</bool>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
     </widget>
@@ -1400,10 +1391,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>40</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_cloud">
@@ -1546,10 +1537,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>80</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_cloud_aoi">
@@ -1836,20 +1827,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;This filter uses the &lt;/span&gt;&lt;a href=&quot;https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/scene-classification/&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;Scene Classification Layer (SCL)&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt; to calculate the percentage of valid pixels within the specified Area of Interest (AOI). It excludes images with a percentage of valid pixels falling below a user-defined threshold. Valid pixels are determined based on selected SCL classes.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;The original images remain intact unless the option &amp;quot;Apply SCL mask to remove pixels&amp;quot; is selected. This option is independent of the filtering threshold and, when enabled, directly modifies the image data by removing pixels classified as invalid. This alteration impacts the computation of time series data as well as daily and composite images, as only valid pixels are considered in these calculations.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;This filter uses the &lt;/span&gt;&lt;a href=&quot;https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/scene-classification/&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;Scene Classification Layer (SCL)&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; to calculate the percentage of valid pixels within the specified Area of Interest (AOI). It excludes images with a percentage of valid pixels falling below a user-defined threshold. Valid pixels are determined based on selected SCL classes.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The original images remain intact unless the option &amp;quot;Apply SCL mask to remove pixels&amp;quot; is selected. This option is independent of the filtering threshold and, when enabled, directly modifies the image data by removing pixels classified as invalid. This alteration impacts the computation of time series data as well as daily and composite images, as only valid pixels are considered in these calculations.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="overwriteMode">
        <bool>true</bool>
       </property>
       <property name="textInteractionFlags">
-       <set>Qt::TextInteractionFlag::LinksAccessibleByKeyboard|Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextBrowserInteraction|Qt::TextInteractionFlag::TextEditable|Qt::TextInteractionFlag::TextEditorInteraction|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+       <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
       </property>
       <property name="openLinks">
        <bool>false</bool>
@@ -2075,10 +2063,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>40</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_cloud_2">
@@ -2151,10 +2139,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>80</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_cloud_aoi_2">
@@ -2482,10 +2470,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>90</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_coverage_2">
@@ -2592,10 +2580,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>0</number>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
       <property name="tickPosition">
-       <enum>QSlider::TickPosition::TicksBothSides</enum>
+       <enum>QSlider::TicksBothSides</enum>
       </property>
      </widget>
     </widget>
@@ -2746,7 +2734,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="dateTime">
        <datetime>
-        <hour>21</hour>
+        <hour>0</hour>
         <minute>0</minute>
         <second>0</second>
         <year>2022</year>
@@ -2755,7 +2743,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </datetime>
       </property>
       <property name="currentSection">
-       <enum>QDateTimeEdit::Section::YearSection</enum>
+       <enum>QDateTimeEdit::YearSection</enum>
       </property>
       <property name="displayFormat">
        <string>yyyy/M/d</string>
@@ -2764,7 +2752,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <bool>true</bool>
       </property>
       <property name="timeSpec">
-       <enum>Qt::TimeSpec::LocalTime</enum>
+       <enum>Qt::LocalTime</enum>
       </property>
       <property name="date">
        <date>
@@ -2884,7 +2872,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string/>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -2906,7 +2894,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string/>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -3019,7 +3007,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <widget class="Line" name="line_6">
@@ -3032,7 +3020,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <widget class="QPushButton" name="load_1rgb_preview">
@@ -3089,7 +3077,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <zorder>line_4</zorder>
@@ -3179,7 +3167,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Order of the polynomial:</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -3224,7 +3212,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Filter window's lenght:</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -3440,7 +3428,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_28">
@@ -3461,7 +3449,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Metric</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -3488,7 +3476,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Index</string>
       </property>
       <property name="textFormat">
-       <enum>Qt::TextFormat::AutoText</enum>
+       <enum>Qt::AutoText</enum>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -3529,7 +3517,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <zorder>line_7</zorder>
@@ -3844,19 +3832,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;This feature enables the analysis of the time series for points selected on the map. To use it, activate the &amp;quot;Enable point comparison&amp;quot; option and click on the screen to start the point analysis, which will be added to the chart after a few seconds. Each click adds a new point to the analysis. Each created point corresponds to a new area of interest that covers only a single pixel (10m x 10m) at its central region, even if the displayed outline appears larger. The analysis uses the same image selection defined in the &amp;quot;Panel&amp;quot; tab, so avoid selecting points outside the original area of interest.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This feature enables the analysis of the time series for points selected on the map. To use it, activate the &amp;quot;Enable point comparison&amp;quot; option and click on the screen to start the point analysis, which will be added to the chart after a few seconds. Each click adds a new point to the analysis. Each created point corresponds to a new area of interest that covers only a single pixel (10m x 10m) at its central region, even if the displayed outline appears larger. The analysis uses the same image selection defined in the &amp;quot;Panel&amp;quot; tab, so avoid selecting points outside the original area of interest.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="overwriteMode">
        <bool>true</bool>
       </property>
       <property name="textInteractionFlags">
-       <set>Qt::TextInteractionFlag::LinksAccessibleByKeyboard|Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextBrowserInteraction|Qt::TextInteractionFlag::TextEditable|Qt::TextInteractionFlag::TextEditorInteraction|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+       <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
       </property>
       <property name="openLinks">
        <bool>false</bool>
@@ -4144,19 +4129,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;This feature is designed for Multipolygon areas of interest and allows simultaneous visualization of the time series for each polygon individually. To function correctly, you must select an attribute table field that uniquely identifies each polygon. The image selection is the same as the area of interest defined in the &amp;quot;Panel&amp;quot; tab, and the configured buffer (Step 7) will be applied separately to each polygon. Processing time can vary significantly depending on the number of polygons and images.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This feature is designed for Multipolygon areas of interest and allows simultaneous visualization of the time series for each polygon individually. To function correctly, you must select an attribute table field that uniquely identifies each polygon. The image selection is the same as the area of interest defined in the &amp;quot;Panel&amp;quot; tab, and the configured buffer (Step 7) will be applied separately to each polygon. Processing time can vary significantly depending on the number of polygons and images.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="overwriteMode">
        <bool>true</bool>
       </property>
       <property name="textInteractionFlags">
-       <set>Qt::TextInteractionFlag::LinksAccessibleByKeyboard|Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextBrowserInteraction|Qt::TextInteractionFlag::TextEditable|Qt::TextInteractionFlag::TextEditorInteraction|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+       <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
       </property>
       <property name="openLinks">
        <bool>false</bool>
