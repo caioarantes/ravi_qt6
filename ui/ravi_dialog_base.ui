@@ -3788,21 +3788,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
      </widget>
     </widget>
-    <widget class="QWebView" name="webEngineView">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>140</y>
-       <width>300</width>
-       <height>200</height>
-      </rect>
-     </property>
-     <property name="url">
-      <url>
-       <string>about:blank</string>
-      </url>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="tab_12">
     <attribute name="title">
@@ -4262,16 +4247,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <class>QgsPasswordLineEdit</class>
    <extends>QLineEdit</extends>
    <header>qgspasswordlineedit.h</header>
-  </customwidget>
-  <customwidget>
-   <class>QWebEngineView</class>
-   <extends>QWidget</extends>
-   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
-  </customwidget>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWebEngineView</extends>
-   <header>qwebview.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

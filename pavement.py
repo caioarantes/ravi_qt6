@@ -12,7 +12,7 @@ from paver.easy import *
 
 options(
     plugin=Bunch(
-        name='ravi',
+        name='ravi_qt6',
         ext_libs=path('extlibs'),
         source_dir=path('.'),
         package_dir=path('.'),
@@ -27,7 +27,7 @@ options(
             "medias",
             "i18",
             'modules'
-            "ravi.zip"
+            "ravi_qt6.zip"
         ]
     ),
 )

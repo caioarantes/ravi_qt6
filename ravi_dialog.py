@@ -529,7 +529,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
                 self.accept() # close dialog
         # Create and show the dialog
         dialog = CustomIndexDialog(self)  # Pass RAVIDialog instance as parent
-        dialog.exec_() # Run and await
+        dialog.exec() # Run and await
 
         if dialog.result():
         # Store expression and name in settings
@@ -1375,8 +1375,9 @@ class RAVIDialog(QDialog, FORM_CLASS):
         layout.addWidget(scroll_area)
 
         # Buttons / Botões
+        # Use QDialogButtonBox.StandardButton for Qt6 compatibility
         button_box = QDialogButtonBox(
-            QDialogButtonBox.Ok | QDialogButtonBox.Cancel, dialog
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, dialog
         )
         button_layout = QHBoxLayout()
         apply_button = QPushButton("Apply", dialog)
@@ -1397,7 +1398,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
         select_button.clicked.connect(self.select_all_checkboxes)
         deselect_button.clicked.connect(self.deselect_all_checkboxes)
 
-        if dialog.exec_() == QDialog.Accepted:
+        if dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_changes()  # Ensure changes are applied before closing
         else:
             print("Time series dialog canceled. No changes made.")
@@ -1835,10 +1836,10 @@ class RAVIDialog(QDialog, FORM_CLASS):
         result = dialog.exec()
         
         # Return which button was pressed
-        if result == QDialog.Accepted:
-            return QMessageBox.Ok
+        if result == QDialog.DialogCode.Accepted:
+            return QMessageBox.StandardButton.Ok
         else:
-            return QMessageBox.Cancel
+            return QMessageBox.StandardButton.Cancel
 
     def update_vector_clicked(self):
         self.load_vector_layers()
@@ -2219,7 +2220,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
             index_image = self.calculate_vegetation_index(first_image, vegetation_index)
 
             # Prepare download URL and output filename
-            url = index_image.getDownloadUrl(
+            url = index_image.getDownloadURL(
                 {
                     "scale": 10,
                     "region": aoi.geometry().bounds().getInfo(),
@@ -2462,7 +2463,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
 
             # Generate download URL
             try:
-                url = first_image.getDownloadUrl(
+                url = first_image.getDownloadURL(
                     {
                         "scale": 10,
                         "region": region,
@@ -2790,7 +2791,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
             # The actual clipping to the irregular shape is handled by updateMask.
             download_region = aoi.geometry().bounds().getInfo()
 
-            url = final_image_masked.getDownloadUrl(
+            url = final_image_masked.getDownloadURL(
                 {
                     "scale": 10,
                     "region": download_region,
@@ -3026,7 +3027,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
             else:
                 response = self.pop_warning_2("\n".join(self.collection_info))
 
-            if response == QMessageBox.Ok:
+            if response == QMessageBox.StandardButton.Ok:
                 print("User clicked OK")
                 self.tabWidget.setCurrentIndex(10)
             else:
