@@ -78,7 +78,7 @@
     <bool>false</bool>
    </property>
    <property name="currentIndex">
-    <number>12</number>
+    <number>0</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -2801,6 +2801,36 @@ p, li { white-space: pre-wrap; }
     <attribute name="title">
      <string>Painel</string>
     </attribute>
+    <widget class="QWebView" name="webView" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>1131</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="locale">
+      <locale language="Portuguese" country="Brazil"/>
+     </property>
+     <property name="url" stdset="0">
+      <url>
+       <string/>
+      </url>
+     </property>
+    </widget>
     <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
       <rect>
@@ -3718,6 +3748,7 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
+    <zorder>webView</zorder>
     <zorder>groupBox</zorder>
     <zorder>groupBox_2</zorder>
     <zorder>groupBox_8</zorder>
@@ -3899,6 +3930,36 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
+    <widget class="QWebView" name="webView_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>1141</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="locale">
+      <locale language="Portuguese" country="Brazil"/>
+     </property>
+     <property name="url" stdset="0">
+      <url>
+       <string/>
+      </url>
+     </property>
+    </widget>
     <widget class="QPushButton" name="clear_button_points">
      <property name="geometry">
       <rect>
@@ -3983,11 +4044,47 @@ p, li { white-space: pre-wrap; }
        <normaloff>../medias/icons8-calendário-50.png</normaloff>../medias/icons8-calendário-50.png</iconset>
      </property>
     </widget>
+    <zorder>webView_3</zorder>
+    <zorder>groupBox_13</zorder>
+    <zorder>clear_button_points</zorder>
+    <zorder>navegador_3</zorder>
+    <zorder>salvar_3</zorder>
+    <zorder>datasrecorte_3</zorder>
    </widget>
    <widget class="QWidget" name="tab_11">
     <attribute name="title">
      <string>Análise Multifeição</string>
     </attribute>
+    <widget class="QWebView" name="webView_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>1141</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="locale">
+      <locale language="Portuguese" country="Brazil"/>
+     </property>
+     <property name="url" stdset="0">
+      <url>
+       <string/>
+      </url>
+     </property>
+    </widget>
     <widget class="QGroupBox" name="groupBox_16">
      <property name="geometry">
       <rect>
@@ -4179,6 +4276,11 @@ p, li { white-space: pre-wrap; }
    <class>QgsPasswordLineEdit</class>
    <extends>QLineEdit</extends>
    <header>qgspasswordlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
  <resources/>

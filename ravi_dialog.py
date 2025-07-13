@@ -20,6 +20,7 @@ email                : caiosimplicioarante@gmail.com
 *                                                                         *
 ***************************************************************************/
 """
+
 import os
 import tempfile
 import datetime
@@ -140,6 +141,7 @@ else:
     ui_file = os.path.join("ui", "ravi_dialog_base.ui")
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(os.path.dirname(__file__), ui_file))
+
 class RAVIDialog(QDialog, FORM_CLASS):
     def __init__(self, parent=None, iface=None):
         super(RAVIDialog, self).__init__(parent)
@@ -171,13 +173,36 @@ class RAVIDialog(QDialog, FORM_CLASS):
         # Set default values / Define valores padrão
         self.last_clicked(3)
         self.index_explain()
-        
-        self.resizeEvent("small")
+        self.load_intro()
+       
         self.tabWidget.setCurrentIndex(0)
+        
+        # Lock window size immediately after initialization
+        # Use QTimer to ensure the window is fully initialized
+        QTimer.singleShot(0, lambda: self.resizeEvent("small"))
+
+    def load_intro(self):
+        # Load intro.html into QTextBrowser
+
+        if self.language == "pt":
+            intro_path = os.path.join(os.path.dirname(__file__), "ui", "intro_pt.html")
+        else:
+            intro_path = os.path.join(os.path.dirname(__file__), "ui", "intro.html")
+
+        with open(intro_path, "r", encoding="utf-8") as f:
+            html_content = f.read()
+        
+        self.QTextBrowser.setHtml(html_content)
 
     def showEvent(self, event):
         """Start timer when dialog is shown"""
         super().showEvent(event)
+        
+        # Ensure window is locked when first shown
+        if not hasattr(self, '_size_locked'):
+            self.resizeEvent("small")
+            self._size_locked = True
+            
         if hasattr(self, 'focus_timer'):
             self.focus_timer.start(100)
 
@@ -1557,15 +1582,18 @@ class RAVIDialog(QDialog, FORM_CLASS):
         self.move(qtRectangle.topLeft())
 
     def resizeEvent(self, size):
-        self.setMinimumSize(0, 0)  # Remove minimum size constraint
-        self.setMaximumSize(16777215, 16777215)  # Rem
+        # Remove size constraints first
+        self.setMinimumSize(0, 0)
+        self.setMaximumSize(16777215, 16777215)
 
         if size == "small":
             self.resize(743, 373)
-            self.setFixedSize(self.width(), self.height())  # Lock to small size
+            # Lock to small size - this prevents resizing
+            self.setFixedSize(self.width(), self.height())
         elif size == "big":
             self.resize(1145, 620)
-            self.setFixedSize(self.width(), self.height())  # Lock to big size
+            # Lock to big size - this prevents resizing
+            self.setFixedSize(self.width(), self.height())
 
     def on_tab_changed(self, index):
         # CRITICAL: Get the recursion guard flag safely.
@@ -3418,9 +3446,9 @@ class RAVIDialog(QDialog, FORM_CLASS):
         """Adjusts the main DataFrame based on the selected dates."""
         """Ajusta o DataFrame principal com base nas datas selecionadas."""
         df = self.df.copy()
-        #df.to_csv("df.csv", index=False)
         if self.recorte_datas:
-            df = df[df["date"].isin(self.recorte_datas)]
+            # Ensure both sides are strings for comparison
+            df = df[df["date"].astype(str).isin([str(d) for d in self.recorte_datas])]
             self.df_aux = df.copy()
         else:
             self.df_aux = df.copy()
@@ -3430,7 +3458,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
         """Ajusta o DataFrame de feições com base nas datas selecionadas."""
         df = self.df_features.copy()
         if self.recorte_datas:
-            df = df[df["date"].isin(self.recorte_datas)]
+            df = df[df["date"].astype(str).isin([str(d) for d in self.recorte_datas])]
             self.df_aux_features = df.copy()
         else:
             self.df_aux_features = df.copy()
@@ -3440,7 +3468,7 @@ class RAVIDialog(QDialog, FORM_CLASS):
         """Ajusta o DataFrame de pontos com base nas datas selecionadas."""
         df = self.df_points.copy()
         if self.recorte_datas:
-            df = df[df["date"].isin(self.recorte_datas)]
+            df = df[df["date"].astype(str).isin([str(d) for d in self.recorte_datas])]
             self.df_aux_points = df.copy()
         else:
             self.df_aux_points = df.copy()
